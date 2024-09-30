@@ -16,8 +16,9 @@ $result = $conn->query($sql);
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            background-color: #f8f9fa;
+            background-color: #e9f5e9; /* Warna latar belakang hijau muda */
             padding: 20px;
+            font-family: Arial, sans-serif;
         }
         .table-container {
             background: #fff;
@@ -26,7 +27,7 @@ $result = $conn->query($sql);
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
         .table thead th {
-            background-color: #343a40;
+            background-color: #2c6e49; /* Warna hijau gelap untuk header tabel */
             color: #fff;
         }
         .btn-edit {
@@ -35,6 +36,16 @@ $result = $conn->query($sql);
         }
         .btn-edit:hover {
             background-color: #0056b3;
+        }
+        .btn-home {
+            background-color: #4CAF50; /* Warna hijau untuk tombol kembali */
+            color: white; 
+            border-radius: 20px;
+            padding: 10px 20px;
+            transition: background-color 0.3s;
+        }
+        .btn-home:hover {
+            background-color: #45a049; /* Efek hover untuk tombol kembali */
         }
     </style>
 </head>
@@ -70,10 +81,10 @@ $result = $conn->query($sql);
 
         <!-- Tombol Kembali -->
         <div class="text-start mt-4">
-    <a href="../index.php" class="btn btn-home btn-sm" style="background-color: #007bff; color: white; border-radius: 20px; padding: 10px 20px; transition: background-color 0.3s;">
-        Kembali ke Beranda
-    </a>
-</div>
+            <a href="../index.php" class="btn btn-home btn-sm">
+                Kembali ke Beranda
+            </a>
+        </div>
 
     </div>
 

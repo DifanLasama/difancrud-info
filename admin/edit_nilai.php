@@ -61,6 +61,84 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             max-width: 600px;
             margin: auto;
         }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Nilai Siswa</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f4f7fc; /* Warna latar belakang yang lebih lembut */
+            padding: 20px;
+        }
+        .form-container {
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+            max-width: 600px;
+            margin: auto;
+            transition: transform 0.3s ease;
+        }
+        .form-container:hover {
+            transform: translateY(-5px); /* Efek hover untuk form */
+        }
+        h2 {
+            color: #333;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+        .form-label {
+            color: #495057;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+        .form-control {
+            border-radius: 8px;
+            padding: 10px;
+            border: 1px solid #ced4da;
+            transition: border-color 0.3s ease;
+        }
+        .form-control:focus {
+            border-color: #007bff;
+            box-shadow: none;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+            border-radius: 25px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+        .btn-secondary {
+            border-radius: 25px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .btn-secondary:hover {
+            background-color: #6c757d;
+        }
+        .form-control, .btn {
+            margin-bottom: 20px;
+        }
+        @media (max-width: 768px) {
+            .form-container {
+                padding: 20px;
+            }
+            .btn-primary, .btn-secondary {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -80,8 +158,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <label for="nilai" class="form-label">Nilai</label>
                     <input type="number" id="nilai" name="nilai" class="form-control" value="<?php echo htmlspecialchars($nilai['nilai']); ?>" required>
                 </div>
-                <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
-                <a href="nilai.php" class="btn btn-secondary">Kembali</a>
+                <button type="submit" class="btn btn-primary w-100">Simpan Perubahan</button>
+                <a href="nilai.php" class="btn btn-secondary w-100">Kembali</a>
             </form>
         </div>
     </div>
@@ -90,3 +168,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
